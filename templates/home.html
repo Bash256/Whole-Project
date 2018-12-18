@@ -1,0 +1,60 @@
+<h1>Productivity</h1>
+
+<div ng-show="user">
+    <h1>Welcome {{user.displayName}}</h1>
+    <body class="col">
+        <div class="container">
+           
+            <div class="row">
+                <div class="col-md-4 col-sm-4 ">
+                    <div class="service-box">
+                        <div class="service-icon yellow">
+                            <div class="front-content">
+    
+                                <a href="/dashboard/indexdashboard.html"> <h1>Dashboard</h1>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Plan your day today!</h3>
+                            <p> Here we provide a schedule as well as date,time and your ip adress location. At the bottom we provide Quotes for the user to motivate you as everyday goes by!
+                            </p>
+                        </div>
+                    </div>
+                </div></a>
+                <div class="col-md-4 col-sm-4 ">
+                    <div class="service-box">
+                        <div class="service-icon news">
+                            <div class="front-content">
+    
+                                <a href="/news/index.html">
+    
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Daily News</h3>
+                            <p>Here we provide you the recent news as well as keeping our users updated , in both locally as well as internationally news! Feel free to enter!</p>
+                        </div>
+                    </div>
+                </div></a>
+                <div class="col-md-4 col-sm-4 ">
+                    <div class="service-box">
+                        <div class="service-icon wiki">
+                            <div class="front-content">
+    
+                                <a href="/wiki/indexwiki.html">
+    
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Need information?</h3>
+                            <p>Wikipedia gives you the information, search anything you like and you will recieve what you
+                                seek!</p>
+                        </div>
+                    </div>
+                </div></a>
+                
+    
+</div>
+<div ng-hide="user">
+    <h1>Please Sign in</h1>
+</div>

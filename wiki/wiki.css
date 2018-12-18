@@ -1,0 +1,24 @@
+body {
+    background-image: url("http://ocdn.eu/images/pulscms/YTc7MDA_/292fc99ddf1e88cd4dd4f6a27440bc85.jpg");
+    text-align:center;
+    background-size: 35%;
+    background-repeat: no-repeat;
+    font-family: 'Merriweather', serif;
+    
+  }
+  
+  hr {
+    border: 1px solid lightgrey;
+  }
+  
+  #wiki {
+    height: 18%;
+    width: 18%;
+  }
+
+  .btn{
+    width:80px;
+    height:32px;
+  }
+
+

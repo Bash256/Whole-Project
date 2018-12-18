@@ -1,0 +1,19 @@
+<section>
+    <form class="form" ng-submit="login(user)">
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+       
+        <input type="email" ng-model="user.email" placeholder="Email">
+    </div>
+    <div class="col-sm-4">
+        <input type="password" ng-model="user.password" placeholder="Password">
+    </div>
+    <div class="col-sm-3">
+        <button type="submit">Login</button>
+    </div>
+        <p><small>{{error}}</small></p>
+    </div><!--row-->
+    </div><!--container-->
+    </form>
+</section>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   
+<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+
+<link rel="stylesheet" href="wiki.css">
+
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Wikipedia</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard/indexdashboard.html">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/news/index.html">News</a>
+        </li>
+      
+      </ul>
+    </div>
+  </nav>
+
+    
+
+
+
+<body ng-app="wikiApp">
+    <div ng-controller="wikiController" class="container text-center">
+      <h1>{{headerInfo.project}}</h1>
+      <h3>{{headerInfo.site}}</h3>
+      <a ng-href="{{randomLink}}" target="blank">
+        <img id="wiki" src="https://cdn1.iconfinder.com/data/icons/simple-icons/4096/wikipedia-4096-black.png"></a>
+      <p>Search for anything!</p>
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+          <div class="input-group">
+          <form ng-submit="searchWiki()">
+            <input class="form-control" ng-model="searchTerm" placeholder="Search Wikipedia Here">
+          </form>
+        <span class="input-group-btn">
+          <button><a class="btn btn-white" ng-click="searchWiki()">Search</a>
+            </span></button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <span ng-repeat="info in searchTermArr[0]">
+          <a ng-href = {{searchTermArr[2][$index]}} target = "blank">
+            <h1>{{info}}</h1>
+          </a>
+          <h2>{{searchTermArr[1][$index]}}</h2>
+          <hr>
+        </span>
+      </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    <script src="wiki.js"></script>
+  </body>
+  </html>
